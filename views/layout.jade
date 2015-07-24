@@ -1,0 +1,10 @@
+doctype html
+html
+  head
+    title Functional Reactive Programming in your Browser with Elm - JQuery Conf '15
+    script(type="text/javascript").
+      window.files=!{JSON.stringify(files)};
+      window.sources=!{JSON.stringify(sources)};
+  body
+    #app
+    script(src="http://localhost:4000/bundle/js/app.js")
