@@ -15,7 +15,6 @@ class Editor extends React.Component {
   }
   updateCode() {
     updateCode(this.props.file, this.editor.getValue());
-    this.setState({code: this.editor.getValue()});
   }
   setupEditor(codeArea) {
     var editor = CodeMirror.fromTextArea(codeArea, {
@@ -39,17 +38,14 @@ class Editor extends React.Component {
     var codeArea = this.refs.codearea.getDOMNode();
     this.setupEditor(codeArea);
   }
-  componentWillReceiveProps(newProps, oldProps) {
-    if(this.editor && oldProps.code !== newProps.code) {
-      this.editor.setValue(newProps.code);
-      this.setState({code: newProps.code});
-    }
+  componentDidUpdate() {
+    this.editor.setValue(sources[this.props.file]);
   }
   render() {
     var style = {position: "relative", height: "100%", weight: "100%"};
     return (
       <textarea ref="codearea" style={style}>
-        {this.state.code}
+        {sources[this.props.file]}
       </textarea>
     );
   }
