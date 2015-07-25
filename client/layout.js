@@ -77,7 +77,7 @@ class Layout extends React.Component {
         <div className="row">
           <div className="col-sm-12 header">
             <img className="logo" src="/imgs/logo.png"/>
-            <h3>FRP in your Browser with Elm</h3>
+            <h3>FRP in your Browser with Elm - @vagmi</h3>
             <div className="controls pull-right">
               <button onClick={this.compileCode}>Compile</button>
               <select ref="sourceSelector" onChange={this.setSource}>
