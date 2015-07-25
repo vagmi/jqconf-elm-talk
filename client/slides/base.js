@@ -22,13 +22,18 @@ export default class Slide extends React.Component {
       transform: "translate(-50%)",
       color: colors.sectionBackground
     };
-    var twitterStyle = {
+    var iconStyle = {
+      margin: 5,
       color: colors.sectionBackground
     }
     return (
       <div className="slide" style={slideStyle}>
         {this.props.children}
-        <h3 style={footerStyle}><span style={twitterStyle} className="fa fa-twitter"/> @vagmi</h3>
+        <h3 style={footerStyle}>
+          <span style={iconStyle} className="fa fa-github"/>
+          <span style={iconStyle} className="fa fa-twitter"/>
+          @vagmi
+        </h3>
       </div>
     );
   }

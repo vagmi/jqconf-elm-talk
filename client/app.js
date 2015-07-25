@@ -6,6 +6,7 @@ import Layout from "./layout";
 import First from "./slides/first";
 import AboutMe from "./slides/about_me";
 import AboutElm from "./slides/about_elm";
+import WeAreHiring from "./slides/we_are_hiring.js";
 
 
 class DefaultHander extends React.Component {
@@ -19,6 +20,7 @@ var slides = [
   {path: "about-elm", handler: AboutElm},
   {path: "about", handler: AboutMe},
   {path: "editor", handler: Layout},
+  {path: "hiring", handler: WeAreHiring}
 ];
 
 var routes = (
